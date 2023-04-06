@@ -1,5 +1,5 @@
 # Ether_Inter
 The process of deploying the transaction in Ganache Testnet.<br>
-...shell
+```shell
 node deploy.js
-...shell
+```shell
