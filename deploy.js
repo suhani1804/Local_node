@@ -13,7 +13,7 @@ async function main() {
 
   //Wallet is from where we want to transfer the ether so need to provide info about private key of the wallet 
   const wallet = new ethers.Wallet(
-    "0xcba006412cb9d3648025e0a8265140dfce0380503a55049c0e1d54f814a5e402", //e.g it is private key of the address that we are using in ganache
+    "Private_key", //e.g it is private key of the address that we are using in ganache
     provider //provider of network is required to get wallet
   );
 
@@ -21,11 +21,11 @@ async function main() {
   // abi and binary code re main requirememnt to interact to any smart contract
   
   //from fs / fs-extra we can get the abi and binary compiler 
-  const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf-8");
+  const abi = fs.readFileSync("ABI address", "utf-8");
   // readFileSync("path of the abi", "utf-8 for encoding the abi")
 
 
-  const binary = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin","utf-8");
+  const binary = fs.readFileSync("Bin address","utf-8");
 
   // In ethers contract factory is just an object that is used to deploy the contract
   // As we are deploying our smart contract we must have abi and bin to interract and also the wallet address where we want to deploy it.
